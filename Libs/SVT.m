@@ -1,7 +1,4 @@
 function [ X ] = SVT( A, tau)
-
-%     [U0,Sigma0,V0] = svd( full(A), 'econ' );  %%%%%%%%mex file SVD
-%        [U0,Sigma0,V0] = svds(full(A), 10, 'L');
     [U0,Sigma0,V0] = svd( full(A), 'econ' );  %%%%%%%%mex file SVD
     Sigma0 = diag(Sigma0);
     S      = soft(Sigma0, tau);
